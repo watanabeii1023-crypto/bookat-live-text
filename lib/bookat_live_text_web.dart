@@ -2,8 +2,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 /// Web implementation: text recognition is not available in the browser.
-/// `isSupported` returns false so apps (and FlutterFlow Test / Run Mode) keep
-/// working and can simply hide the feature.
+/// `isSupported` / `isSelectionSupported` return false so apps (and
+/// FlutterFlow Test / Run Mode) keep working and can simply hide the feature.
 class BookatLiveTextWeb {
   BookatLiveTextWeb._();
 
@@ -16,8 +16,12 @@ class BookatLiveTextWeb {
     channel.setMethodCallHandler((MethodCall call) async {
       switch (call.method) {
         case 'isSupported':
+        case 'isSelectionSupported':
           return false;
         case 'recognize':
+        case 'capturePhoto':
+        case 'selectText':
+        case 'captureAndSelect':
           throw PlatformException(
             code: 'unsupported',
             message: 'Text recognition is not available on the web.',
