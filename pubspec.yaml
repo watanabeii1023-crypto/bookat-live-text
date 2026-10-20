@@ -1,9 +1,10 @@
 name: bookat_live_text
 description: >-
-  On-device text recognition with Apple's VisionKit ImageAnalyzer (the Live
-  Text engine), including vertical Japanese in reading order. iOS 16+ on
-  supported devices; reports "not supported" on other platforms and on the web.
-version: 0.1.0
+  On-device text recognition and Live Text selection with Apple's VisionKit
+  (ImageAnalyzer / ImageAnalysisInteraction), including vertical Japanese in
+  reading order, and an in-app camera. iOS 16+ (selection iOS 17+) on
+  supported devices; reports "not supported" on other platforms and the web.
+version: 0.2.0
 publish_to: none
 homepage: https://github.com/watanabeii1023-crypto/bookat-live-text
 
